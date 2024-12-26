@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 from app.domain.models.base_model import BaseModel
 from core.db import db
 
+
 class Category(db.Model, BaseModel):
     __tablename__ = "category"
     id = Column(Integer, primary_key=True, index=True)

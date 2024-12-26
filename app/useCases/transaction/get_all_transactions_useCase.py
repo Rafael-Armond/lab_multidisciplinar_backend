@@ -1,0 +1,2 @@
+class GetAllTransactionsUseCase:
+    pass

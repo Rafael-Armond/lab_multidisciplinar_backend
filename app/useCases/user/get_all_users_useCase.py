@@ -14,4 +14,4 @@ class GetAllUsersUseCase:
     usersDto = [UserMapper().userEntityToUserDto(user) for user in users]
     
     return jsonify({"message": "Usuários obtidos com sucesso!",
-                    "data": [UserMapper().convertFromDtoToJson(user) for user in usersDto]})
+                    "data": [UserMapper().convertFromDtoToJson(user) for user in usersDto]}), 200
