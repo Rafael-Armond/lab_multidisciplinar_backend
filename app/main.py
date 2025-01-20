@@ -4,6 +4,7 @@ from app.routes.user_routes import user_routes
 from app.routes.products_routes import product_routes
 from app.routes.categories_routes import category_routes
 from app.routes.shipment_routes import shipment_routes
+from app.routes.orders_routes import orders_routes
 from flask_cors import CORS
 
 
@@ -26,6 +27,7 @@ app.register_blueprint(user_routes.router, url_prefix=url_prefix_v1)
 app.register_blueprint(product_routes.router, url_prefix=url_prefix_v1)
 app.register_blueprint(category_routes.router, url_prefix=url_prefix_v1)
 app.register_blueprint(shipment_routes.router, url_prefix=url_prefix_v1)
+app.register_blueprint(orders_routes.router, url_prefix=url_prefix_v1)
 
 if __name__ == "__main__":
     app.run(debug=True)
