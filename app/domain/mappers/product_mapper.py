@@ -14,6 +14,7 @@ class ProductMapper(BaseMapper[ProductDTO]):
             description=entity.description,
             name=entity.name,
             value=entity.value,
+            id=entity.id,
         )
 
     @staticmethod
@@ -32,6 +33,7 @@ class ProductMapper(BaseMapper[ProductDTO]):
             "value": dto.value,
             "description": dto.description,
             "categoryId": dto.categoryId,
+            "id": dto.id,
         }
 
     @classmethod

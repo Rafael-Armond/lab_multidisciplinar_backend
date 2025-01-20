@@ -1,10 +1,8 @@
 from app.domain.models.base_model import BaseModel
+from app.domain.models.product import Product
 
-# Esse model eu vou usar somente para lançar na fila (mensageria)
+
 class Shipment(BaseModel):
-  def __init__(self, product, amount):
-    self.product = product
-    self.amount = amount
-  
-  
-  
+    def __init__(self, product: Product, amount):
+        self.product: Product = product
+        self.amount = amount

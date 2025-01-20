@@ -1,6 +1,5 @@
 from flask import Blueprint, request
 
-from app.domain.DTOs import product_dto
 from app.domain.models.product import Product
 from app.repository.implementations.base_repository import BaseRepository
 from app.repository.implementations.product_repository import ProductRepository

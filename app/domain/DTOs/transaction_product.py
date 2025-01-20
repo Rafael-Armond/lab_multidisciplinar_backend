@@ -1,17 +1,15 @@
 from datetime import datetime
 
-from app.domain.DTOs.purchased_product_dto import PurchasedProductDTO
 
-
-class TransactionDTO:
+class TransactionProductDTO:
     def __init__(
         self,
+        id: int,
         total_value: float,
         created_at: datetime,
         client_name: str,
         client_cpf: str,
-        purchased_products: list[PurchasedProductDTO],
-        id: int = None,
+        purchased_products: list[int],
     ):
         super().__init__(id)
         self.total_value = total_value
