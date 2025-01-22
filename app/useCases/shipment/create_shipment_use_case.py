@@ -1,6 +1,8 @@
+from app.main import socketio
+
+
 class CreateShipmentUseCase:
     def execute(self, data):
-        # Pegar o objeto recebido e transformar em um json
-        # Enviar esse json para o front do cliente
         print("Teste 123: ", data)
-        return "Nois"
+        socketio.emit("new_shipment", data, to=None)
+        return "Remessa enviada ao cliente"

@@ -9,7 +9,7 @@ socketio = SocketIO(cors_allowed_origins="*")  # Criando o socketio fora da fun�
 def create_app():
     app = Flask(__name__)
 
-    CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+    CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     # Configuração do PostgreSQL
     app.config["SQLALCHEMY_DATABASE_URI"] = (
@@ -54,4 +54,4 @@ def handle_disconnect():
 
 if __name__ == "__main__":
     app = create_app()
-    socketio.run(app, debug=True, host="0.0.0.0", port=5000)
+    socketio.run(app, debug=True, host="0.0.0.0", port=5000, use_reloader=False)
